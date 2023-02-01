@@ -1,0 +1,80 @@
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="./assets/index.css" media="screen" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./assets/index.js"></script>
+
+        <link rel="stylesheet" href="./assets/plugins/sortable/index.css" />
+
+        <title>Project Kafé</title>
+    </head>
+    <body>
+        <div class="scrollbar"><div class="thumb"></div></div>
+        <nav>
+            <div class="logo">
+                <a href="#top"><img src="./assets/images/VanillaChibi.png" alt="logo" /></a>
+            </div>
+            <div class="desktop-buttons">
+                <a id="landing_anchor" href="#landing">Landing</a>
+                <a id="hm_anchor" href="#hm">Helpful Myu</a>
+                <a id="nm_anchor" href="#nm">Nyaughty Maiden</a>
+            </div>
+            <div class="mobile-buttons">
+                <a id="landing_anchor" href="#landing">Landing</a>
+                <a id="hm_anchor" href="#hm">Helpful Myu</a>
+                <a id="nm_anchor" href="#nm">Nyaughty Maiden</a>
+            </div>
+        </nav>
+        <main id="landing">
+            <div class="content">
+                <div class="container">
+                    <div class="textArea">
+                        <h2>Project Kafé</h2>
+                        <b style="color: yellow">This site is a work in progress, and does not properly render on mobile</b>
+                        <p>
+                            THIS IS PLACEHOLDER TEXT<br />This is a website for my twin Discord bots, that belong to the Discord servers below, click the buttons below to join the
+                            servers.
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <a href="" onclick="window.open('http:\/\/discord.gg/nekord','popup','width=600,height=600'); return false;">Kafé Katsune</a>
+                        <a href="" onclick="window.open('http:\/\/discord.gg/j4kdyBRqJV','popup','width=600,height=600'); return false;">Nyaughty Nekos</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section id="hm">
+            <h2>Helpful Myu Quotes</h2>
+            <table class="sortable">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>keyword</th>
+                        <th>content</th>
+                        <th>created by</th>
+                        <th>created at</th>
+                    </tr>
+                </thead>
+                <tbody id="hm_quotes"></tbody>
+            </table>
+            <hr />
+        </section>
+        <section id="nm">
+            <h2>Nyaughty Maiden Quotes</h2>
+            <table class="sortable">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>keyword</th>
+                        <th>content</th>
+                        <th>created by</th>
+                        <th>created at</th>
+                    </tr>
+                </thead>
+                <tbody id="nm_quotes"></tbody>
+            </table>
+        </section>
+        <footer></footer>
+        <script async src="./assets/plugins/sortable/index.js"></script>
+    </body>
+</html>

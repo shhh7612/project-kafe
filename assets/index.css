@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: hsla(270, 80%, 35%, 1);
+}
+
+.scrollbar {
+    position: fixed;
+    top: 0;
+    bottom: 1rem;
+    right: 0;
+    width: 10px;
+    z-index: 100000;
+}
+
+.scrollbar .thumb {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    right: 2px;
+    border-radius: 10px;
+    background-color: hsla(270, 80%, 35%, 0.5);
+}
+
+.scrollbar .thumb:hover {
+    background-color: hsla(270, 80%, 15%, 0.75);
+    cursor: pointer;
+}
+
+nav {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 110px;
+    height: 110px;
+    background-color: hsla(270, 80%, 15%, 0.5);
+    z-index: 20;
+    backdrop-filter: blur(5px);
+}
+
+nav .desktop-buttons {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    right: calc(((100% - 1140px) / 2));
+}
+
+nav .desktop-buttons a {
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    transition: color 100ms, border 100ms;
+    text-decoration: none;
+}
+
+nav .desktop-buttons a:hover {
+    color: rgba(135, 218, 230, 0.9);
+    border-bottom: 2px solid rgb(5, 176, 199);
+}
+
+nav .desktop-buttons a.active {
+    color: rgb(5, 176, 199);
+    border-bottom: 2px solid rgb(5, 176, 199);
+}
+
+nav .mobile-buttons {
+    display: none;
+    background-color: rgb(134, 255, 20) !important;
+}
+
+nav .logo a {
+    display: table;
+    white-space: nowrap;
+    animation-duration: 2000ms;
+    margin: 5px auto 0 calc(((100% - 1140px) / 2));
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    background-color: transparent;
+}
+
+nav .logo img {
+    display: block;
+    height: 85%;
+    white-space: nowrap;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    background-size: auto 120vh;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/Background.png");
+    background-attachment: fixed;
+    background-position: 50% 0px, 50% 0px;
+    background-repeat: no-repeat;
+    transition: background-position ease-in-out 1000ms;
+    height: 100%;
+}
+
+main .content::before {
+    content: '';
+    display: table;
+}
+
+main .content::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+main .content {
+    position: relative;
+    margin: auto;
+    -webkit-text-size-adjust: 100%;
+    color:rgba(255, 255, 255, 0.9);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    height: min-content;
+    padding: auto;
+    margin: auto;
+}
+
+main .textarea {
+    position: relative;
+    background-color: hsla(270, 80%, 15%, 0.5);
+    width: 458px;
+    min-height: 223px;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 0.5rem 1rem 1rem;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+main .buttons {
+    display: flex;
+    position: relative;
+    width: 458px;
+    margin: 1rem auto;
+}
+
+main .buttons a {
+    width: 100%;
+    color:rgba(255, 255, 255, 0.9);
+    background-color: hsla(270, 80%, 15%, 0.5);
+    padding: 0.5rem 1.5rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: all 100ms;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+main .buttons a:first-child {
+    margin: 0 0.5rem 0 auto;
+}
+main .buttons a:last-child {
+    margin: 0 auto 0 0.5rem;
+}
+
+main .buttons a:hover {
+    color:rgb(255, 255, 255);
+    background-color: hsla(270, 80%, 15%, 0.75);
+}
+
+section {
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+}
+section h2 {
+    text-align: center;
+    margin: 0 2rem 2rem 2rem;
+}
+section table {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+hr {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 0 1rem;
+    z-index: 20;
+    border-radius: 1000vw;
+}
+section#hm {
+    background-color: #afbbea !important;
+}
+section#nm {
+    background-color: #02e0ea !important;
+}
+
+@media (max-height: 500px) {
+    main {
+        min-height: 500px;
+    }
+
+    main .textarea {
+        min-height: 223px;
+        margin: 160px 0 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    main .content {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        height: 140px;
+    }
+    nav .logo a {
+        margin: 0.75rem 4rem;
+    }
+    nav .desktop-buttons {
+        right: 1rem;
+    }
+    main .content {
+        width: 940px;
+    }
+}
+@media (max-width: 992px) {
+    nav {
+        height: 155px;
+    }
+    main .content {
+        width: 720px;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        height: 155px;
+    }
+    nav .desktop-buttons {
+        display: none;
+    }
+    nav .mobile-buttons {
+        display: block;
+    }
+    main .content {
+        width: 540px;
+    }
+}
+@media (max-width: 576px) {
+    nav .logo a {
+        margin-left: calc(((100% - 340px) / 2));
+    }
+    main .content {
+        width: 340px;
+    }
+    main .textarea {
+        width: 100%;
+    }
+}
